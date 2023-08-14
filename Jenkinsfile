@@ -35,7 +35,7 @@ node {
             sh "aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY"
             sh "aws s3 cp src/index.html s3://source-bucket-demo14"
             aws s3 website s3://source-bucket-demo14/ --index-document index.html
-        }
+        
 }
   
 
