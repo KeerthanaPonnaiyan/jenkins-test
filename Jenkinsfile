@@ -36,5 +36,3 @@ node {
             // sh "aws s3 website s3://source-bucket-demo14/ --index-document index.html"
         }
     }
-}
-
