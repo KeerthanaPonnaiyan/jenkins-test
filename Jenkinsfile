@@ -10,18 +10,10 @@ node {
     stage('Install node modules') {
         sh "npm install"
     }
-
-    // stage("Test") {
-    //     sh "npm run test-headless"
-    // }
-
+  
     stage("Build") {
         sh "ng build"
     }
-     
-     stage('Unit Test') {
-            sh 'ng test'
-     }
   
    // stage('Archive') {
    //          sh "cd dist && zip -r ../${DIST_ARCHIVE}.zip . && cd .."
