@@ -19,7 +19,9 @@ node {
    //          sh "cd dist && zip -r ../${DIST_ARCHIVE}.zip . && cd .."
    //          archiveArtifacts artifacts: "${DIST_ARCHIVE}.zip", fingerprint: true
    //      }
-  
+     stage("Sonar") {
+         sh "npm run sonar"
+     }
    stage('deploy') {
             // sh "aws configure set region $AWS_DEFAULT_REGION" 
             // sh "aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID"  
