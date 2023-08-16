@@ -20,7 +20,7 @@ node {
    //          archiveArtifacts artifacts: "${DIST_ARCHIVE}.zip", fingerprint: true
    //      }
      stage("Sonar") {
-         sh "npm run sonar"
+         sh "sonar-scanner"
      }
    stage('deploy') {
             // sh "aws configure set region $AWS_DEFAULT_REGION" 
