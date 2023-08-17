@@ -7,7 +7,7 @@ node {
         git branch: 'main', url: 'https://github.com/KeerthanaPonnaiyan/jenkins-test.git'
     }
 
-    stage('Install node modules') {
+    stage('Install modules') {
         sh "npm install"
     }
   
