@@ -22,9 +22,6 @@ node {
      stage("Sonar") {
          sh "sonar-scanner"
      }
-     stage("Deploy"){
-       sh "mv dist/Jenkins-test/* /var/www/html"
-     }
    stage('push to S3') {
             // sh "aws configure set region $AWS_DEFAULT_REGION" 
             // sh "aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID"  
@@ -32,4 +29,7 @@ node {
              sh "aws s3 cp dist/jenkins-test/ s3://source-bucket-demo14 --recursive"
              // sh "aws s3 website s3://source-bucket-demo14/ --index-document index.html"
         }
+   stage("Deploy"){
+             sh "aws cp dist/Jenkins-test/* /var/www/html"
+       }
     }
