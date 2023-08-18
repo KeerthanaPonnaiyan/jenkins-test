@@ -25,7 +25,7 @@ node {
      stage("Deploy"){
        sh "mv dist/Jenkins-test/* /var/www/html"
      }
-   stage('deploy') {
+   stage('push to S3') {
             // sh "aws configure set region $AWS_DEFAULT_REGION" 
             // sh "aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID"  
             // sh "aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY"
