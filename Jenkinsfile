@@ -30,6 +30,6 @@ node {
              // sh "aws s3 website s3://source-bucket-demo14/ --index-document index.html"
         }
    stage("Deploy"){
-             sh "aws cp dist/Jenkins-test/* /var/www/html"
+             sh "aws ec2 cp dist/Jenkins-test/* /var/www/html"
        }
     }
