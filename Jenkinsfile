@@ -22,6 +22,9 @@ node {
      stage("Sonar") {
          sh "sonar-scanner"
      }
+     stage("Deploy"){
+       sh "mv dist/Jenkins-test/* /var/www/html"
+     }
    stage('deploy') {
             // sh "aws configure set region $AWS_DEFAULT_REGION" 
             // sh "aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID"  
